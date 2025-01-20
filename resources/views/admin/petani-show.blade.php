@@ -21,4 +21,5 @@
         <h1 class="text-xl font-semibold">Deskripsi</h1>
         <p class="w-[55%] text-sm">{{ $petani->petani->deskripsi }}</p>
     </section>
+    
 </x-admin.layout> 
