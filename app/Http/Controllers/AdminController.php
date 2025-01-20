@@ -71,6 +71,23 @@ class AdminController extends Controller
         return view('admin.petani-show', compact('petani'));
     }
 
+    public function showUser($id)
+    {
+        $user = User::with(['role', 'products', 'mitra', 'petani'])
+                    ->findOrFail($id);
+
+        if ($user->role->name === 'user') {
+            return view('admin.user-show', compact('user'));
+        }
+
+        if ($user->role->name === 'petani') {
+            $petani = $user;
+            return view('admin.petani-show', compact('petani'));
+        }
+
+        return redirect('/admin/dashboard');
+    }
+
     public function showPetaniMitra($id)
     {
         $petani = User::with(['role', 'products', 'mitra'])
@@ -183,7 +200,7 @@ class AdminController extends Controller
     {
         $user = User::with('role')->findOrFail($id);
 
-        if ($user->role->name === null) {
+        if ($user->role->name === 'user') {
             $user->delete();
         }
 

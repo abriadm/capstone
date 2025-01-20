@@ -14,9 +14,9 @@
             @else
                 @foreach ($products as $product)
                     <div class="overflow-hidden p-4 border-2 border-green-500 rounded-xl h-fit flex flex-col gap-y-4">
-                        <img class="w-60 object-cover border-2 border-green-300 rounded-xl"
-                            src="{{ asset('images/bumn.png') }}" alt="products pictures">
-                        <div class="flex justify-between items-center">
+                        <img class="w-60 h-28 object-cover border-2 border-green-300 rounded-xl"
+                            src="{{ Vite::asset('resources/images/no-image.jpg') }}" alt="products pictures">
+                        <div class="flex justify-between items-center gap-2">
                             <h1 class="text-2xl font-semibold">{{ $product->product }}</h1>
                             <p class="text-gray-500 text-sm">{{ $product->user->petani->label }}</p>
                         </div>

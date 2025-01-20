@@ -5,7 +5,7 @@
             <p class="text-ls"><span class="font-medium">Valuasi : </span>{{ $mitra->valuasi }}</p>
             <p class="text-ls"><span class="font-medium">Status : </span>{{ $mitra->status }}</p>
         </div>
-        <img class="object-cover w-96 h-60 ml-auto" src="{{ Vite::asset('resources/images/chandra.jpg') }}" alt="foto perusahaan">
+        <img class="object-cover w-96 h-60 ml-auto" src="{{ Vite::asset('resources/images/no-image.jpg') }}" alt="foto perusahaan">
     </section>
 
     <section class="mt-8 w-[85%]">

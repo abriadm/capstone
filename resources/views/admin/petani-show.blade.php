@@ -1,6 +1,6 @@
 <x-admin.layout>
     <section class="flex items-center mt-10">
-        <img class="w-48 h-48 rounded-full object-cover border-2 mr-10" src="{{ Vite::asset('resources/images/bumn.png') }}" alt="picture profile petani">
+        <img class="w-48 h-48 rounded-full object-cover border-2 mr-10" src="{{ Vite::asset('resources/images/no-image.jpg') }}" alt="picture profile petani">
         <div class="flex flex-col gap-1">
             <p><span class="font-medium mr-3">Nama : </span>{{ $petani->firstName }} {{ $petani->lastName }}</p>
             <p><span class="font-medium mr-3">Email : </span>{{ $petani->email }}</p>
